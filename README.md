@@ -4,7 +4,7 @@
 - The label useful (1) is assigned if more than 60 % of the all votes (cool, funny, and useful) are the "useful"
 - To run the code on your machine use the docker commands below.
 - The feature generation involves text processing, which is computationally expensive.
-- Due to limited computing power only a very small sample from the original data set is being used.
+- Due to limited computing power only a very small sample (20 000 reviews) from the original data set is being used.
 
 
 ### List of features
@@ -59,3 +59,4 @@ NOTE: The Docker container is configured to use 16 GB of RAM and 12 CPUs. In cas
 - In case you want to run the script on the entire data set or use a bigger sample you can download Main.py. Main.py takes the   share of the data set that you want to use as an additional argument, e.g. python Main.py 0.05 uses 5 % of the original data
   set. 
 - It loads the files user.json and review.json as provided by Yelp.
+- The full data set consists of 6 685 900 reviews.
