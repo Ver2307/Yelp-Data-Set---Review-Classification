@@ -52,14 +52,14 @@ Now you can run bash commands inside the docker container. Simply run the python
 python Main_pickled_sample.py
 ```
 
-NOTE: The Docker container is configured to use 16 GB of RAM and 12 CPUs. In case you do not have enough ressources on your machine, you can constrain the container's ressource consumption by the flags --cpus="6" and -m 6g. The container would then only use 6 CPUs and 6 GB of memory. However, calculations might be very slow or even not go through if you allocate to little ressources.
+**NOTE**: The Docker container is configured to use 16 GB of RAM and 12 CPUs. In case you do not have enough ressources on your machine, you can constrain the container's ressource consumption by the flags --cpus="6" and -m 6g. The container would then only use 6 CPUs and 6 GB of memory. However, calculations might be very slow or even not go through if you allocate to little ressources.
 
 ### Use bigger sample or even entire data set
 
 - In case you want to run the script on the entire data set or use a bigger sample you can download Main.py. Main.py takes the   share of the data set that you want to use as an additional argument, e.g. python Main.py 0.05 uses 5 % of the original data
   set. 
 - It loads the files user.json and review.json as provided by Yelp.
-- The full data set consists of 6 685 900 reviews.
+- The full data set consists of *6 685 900* reviews.
 
 ```sh
 python Main.py [FLOAT - SHARE OF DATA TO USE]
