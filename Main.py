@@ -10,7 +10,6 @@ import pandas as pd
 
 import multiprocessing as mp
 
-from multiprocessing import Pool
 from datetime import datetime
 from collections import Counter
 from spacy.lang.en.stop_words import STOP_WORDS
