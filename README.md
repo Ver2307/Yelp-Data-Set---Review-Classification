@@ -6,6 +6,7 @@
 - The feature generation involves text processing, which is computationally expensive.
 - Due to limited computing power only a very small sample from the original data set is being used.
 
+
 ### List of features
 
 - stars
@@ -39,7 +40,7 @@
 
 ### Docker instructions
 
-Download Main.py from this Github repo and merged_small.pkl from Google Drive (https://drive.google.com/file/d/1v1AKrZGwKtehgQwoTUF80gDnq2b7U9Xo/view?usp=sharing) and save them in a folder. Run the following commands:
+Download Main_pickled_sample.py from this Github repo and merged_small.pkl from Google Drive (https://drive.google.com/file/d/1v1AKrZGwKtehgQwoTUF80gDnq2b7U9Xo/view?usp=sharing) and save them in a folder. Run the following commands:
 
 ```sh
 docker pull viavia/firstrepo:yelp_rev_class
@@ -48,6 +49,13 @@ docker run -it -v [YOUR_PATH_TO_FOLDER]:/app -w /app  yelp_rev_class bash
 Now you can run bash commands inside the docker container. Simply run the python file in commandline fashion.
 
 ```sh
-python Main.py [FLOAT - SHARE OF DATA TO USE]
+python Main_pickled_sample.py [FLOAT - SHARE OF DATA TO USE]
 ```
 
+NOTE: The Docker container is configured to use 16 GB of RAM and 12 CPUs. In case you do not have enough ressources on your machine, you can constrain the container's ressource consumption by the flags --cpus="6" and -m 6g. The container would then only use 6 CPUs and 6 GB of memory. However, calculations might be very slow or even not go through if you allocate to little ressources.
+
+### Use bigger sample or even entire data set
+
+- In case you want to run the script on the entire data set or use a bigger sample you can download Main.py. Main.py takes the   share of the data set that you want to use as an additional argument, e.g. python Main.py 0.05 uses 5 % of the original data
+  set. 
+- It loads the files user.json and review.json as provided by Yelp.
