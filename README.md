@@ -52,7 +52,7 @@ Now you can run bash commands inside the docker container. Simply run the python
 python Main_pickled_sample.py
 ```
 
-**NOTE**: The Docker container is configured to use 16 GB of RAM and 12 CPUs. In case you do not have enough ressources on your machine, you can constrain the container's ressource consumption by the flags --cpus="6" and -m 6g. The container would then only use 6 CPUs and 6 GB of memory. However, calculations might be very slow or even not go through if you allocate to little ressources.
+**NOTE**: On Mac you have to allocate more memory to the Docker container to make run the script. The default setting only allocates 2GB of RAM to Docker containers. I configured it to use 16 GB of RAM and 12 CPUs via Docker advanced settings.
 
 ### Use bigger sample or even entire data set
 
