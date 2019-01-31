@@ -49,7 +49,7 @@ docker run -it -v [YOUR_PATH_TO_FOLDER]:/app -w /app  yelp_rev_class bash
 Now you can run bash commands inside the docker container. Simply run the python file in commandline fashion.
 
 ```sh
-python Main_pickled_sample.py [FLOAT - SHARE OF DATA TO USE]
+python Main_pickled_sample.py
 ```
 
 NOTE: The Docker container is configured to use 16 GB of RAM and 12 CPUs. In case you do not have enough ressources on your machine, you can constrain the container's ressource consumption by the flags --cpus="6" and -m 6g. The container would then only use 6 CPUs and 6 GB of memory. However, calculations might be very slow or even not go through if you allocate to little ressources.
@@ -60,3 +60,7 @@ NOTE: The Docker container is configured to use 16 GB of RAM and 12 CPUs. In cas
   set. 
 - It loads the files user.json and review.json as provided by Yelp.
 - The full data set consists of 6 685 900 reviews.
+
+```sh
+python Main.py [FLOAT - SHARE OF DATA TO USE]
+```
