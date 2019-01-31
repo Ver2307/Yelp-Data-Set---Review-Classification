@@ -60,7 +60,7 @@ python Main_pickled_sample.py
   set. 
 - It loads the files user.json and review.json as provided by Yelp.
 - The full data set consists of *6 685 900* reviews.
-- In case you use more than 20 000 reviews, do not forget to change the hyperparameters for the random forest (number of trees, max_depth , ...) in the script (I should have included them as argparse arguments and will do so soon, but have not had the time yet).
+- In case you use more than 20 000 reviews, do not forget to change the hyperparameters for the random forest (number of trees, max_depth , ...) in the *train_andevaluate_model*-function in the script (I should have included them as argparse arguments and will do so soon, but have not had the time yet).
 
 ```sh
 python Main.py [FLOAT - SHARE OF DATA TO USE]
