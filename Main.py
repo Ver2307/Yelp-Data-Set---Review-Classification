@@ -263,16 +263,7 @@ def generate_features(df):
 
 def train_test_split(feature_data, feature_list):
     """Generates train and test split"""
-
-    #x_data = feature_data.drop('useful_01', axis=1)
-    #x_data = x_data[feature_list]
-    #y_labels = feature_data['useful_01']
-    # for whatever reason this error is thrown
-    # TypeError: train_test_split() got an unexpected keyword argument 'stratify'
-    # I am using sckit learn version '0.20.2', feature was introduced in 0.17
-    # couldn't find any quick solution online
-    #return train_test_split(x_data, y_labels, test_size=0.3, random_state=101 )#,stratify=y_labels)
-    # workaround
+    
     feature_data = feature_data[feature_list]
     test_data = feature_data.sample(frac = 0.3, random_state=101)
     idx_to_keep = [idx for idx in feature_data.index if not idx in test_data.index]
