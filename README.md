@@ -1,7 +1,7 @@
 # Review Classification using the Yelp Data Set
 ##### Will other users perceive a yelp review as useful or not?
 - Main.py uses yelp review and user data to train a model that classifies each review as useful or not useful to other users
-- The label useful (1) is assigned if more than 60 % of the all votes (cool, funny, and useful) are the "useful"
+- The label useful (1) is assigned if more than 60 % of the all votes (cool, funny, and useful) are "useful"
 - To run the code on your machine use the docker commands below.
 - The feature generation involves text processing, which is computationally expensive.
 - Due to limited computing power only a very small sample (20 000 reviews) from the original data set is being used.
